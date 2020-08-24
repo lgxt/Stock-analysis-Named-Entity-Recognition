@@ -7,6 +7,7 @@
 
 ---
 ## 1：数据清洗：
+### 1.1：NER标准数据集构建：
 + 数据清洗功能主要完成对股权关系已标注好的数据进行BIO方式文件的转化。转化好的BIO文件可以作为以下Bert-BiLSTM-CRF进行命名实体识别的模型输入。
 + 输入数据在：[数据清洗/inputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/inputData)目录下；
 + 输出数据在：[数据清洗/outputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/outputData)目录下；
@@ -14,15 +15,26 @@
 ```
 python NER-dataset-按每条公告汇总标注构建数据集-统一公告id.py
 ```
-
-### 1.1：输入数据：
-### 1.2：输出数据：
+**完成以上数据清洗之后，就可以解析来进行NER的数据准备和模型训练工作了：**
+### 1.2：NER输入数据：
++ 将数据清洗完成的BIO文件按照80%作为训练集（train.txt）、10%作为验证集（dev.txt）、10%作为测试集（test.txt）放入[NER模型训练输入标准数据集](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/NERdata)文件夹下。
+### 1.3：NER输出数据：
++ 模型训练的结果主要生成与run.py同级目录下的output文件夹中，在模型训练前可以新建下该文件夹，如果没有该目录，模型代码会自动创建该目录。
 
 _ _ _
 ## 2：模型训练：
-### 2.1：Docker镜像的使用：
+**在完成数据处理部分之后，就可以进行模型训练了，在代码中修改当前运行环境的目录信息后，就可以进行如下模型训练工作：**
+### 2.1：Docker镜像的使用（使用服务器：10.167.3.4）：
+```
+docker run --runtime nvidia --rm -it -v /home/yonyou/lucas:/Share lucas/tensorflow:v1.15.0rc2-gpu-py3-v1.1 bash
+```
 ### 2.2：使用Docker镜像使用gpu进行模型训练：
-
+```
+nohup python3 -u run.py > run_log.txt 2>&1 &
+```
 _ _ _
 ## 3：模型预测：
+```
+python3 terminal_predict-original.py
+```
 
