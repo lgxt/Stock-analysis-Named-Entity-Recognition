@@ -24,6 +24,11 @@ python NER-dataset-按每条公告汇总标注构建数据集-统一公告id.py
 _ _ _
 ## 2：模型训练：
 **在完成数据处理部分之后，就可以进行模型训练了，在代码中修改当前运行环境的目录信息后，就可以进行如下模型训练工作：**
+**环境要求**
++ python >= 3.6
++ tensorflow == 1.15.0
++ cuda == 10.0
++ 注意tensorflow和cuda的版本自己根据自己的环境适配就行，具体版本可参考[tensorflow和cuda版本对应关系](https://blog.csdn.net/qq_31747765/article/details/107958052)
 ### 2.1：Docker镜像的使用（使用服务器：10.167.3.4）：
 ```
 docker run --runtime nvidia --rm -it -v /home/yonyou/lucas:/Share lucas/tensorflow:v1.15.0rc2-gpu-py3-v1.1 bash
