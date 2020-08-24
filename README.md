@@ -37,6 +37,15 @@ docker run --runtime nvidia --rm -it -v /home/yonyou/lucas:/Share lucas/tensorfl
 ```
 nohup python3 -u run.py > run_log.txt 2>&1 &
 ```
+### 2.3：退出docker镜像：
++ 直接不保存退出docker容器：
+```
+ctrl + d
+```
++ 退出但是后台运行docker容器：
+```
+ctrl + p + q
+```
 _ _ _
 ## 3：模型预测：
 ```
