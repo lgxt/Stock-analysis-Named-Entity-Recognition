@@ -11,9 +11,9 @@
 + 输入数据在：[数据清洗/inputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/inputData)目录下；
 + 输出数据在：[数据清洗/outputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/outputData)目录下；
 + 脚本运行为：[数据清洗/NER-dataset-按每条公告汇总标注构建数据集-统一公告id.py](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/blob/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/NER-dataset-%E6%8C%89%E6%AF%8F%E6%9D%A1%E5%85%AC%E5%91%8A%E6%B1%87%E6%80%BB%E6%A0%87%E6%B3%A8%E6%9E%84%E5%BB%BA%E6%95%B0%E6%8D%AE%E9%9B%86-%E7%BB%9F%E4%B8%80%E5%85%AC%E5%91%8Aid.py)<br>
-"```
+```
 python NER-dataset-按每条公告汇总标注构建数据集-统一公告id.py
-```"
+```
 
 ### 1.1：输入数据：
 ### 1.2：输出数据：
