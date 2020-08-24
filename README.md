@@ -1,21 +1,26 @@
 # Stock-analysis-Named-Entity-Recognition
-## 本项目主要面向产品竞争类分析中股权关系数据进行分析，本实验通过Ber-BiLSTM-CRF方法进行命名实体识别，本次实验主要识别买方（Buyer）、卖方（Seller）、标的（Target）三种实体。
+## 本项目主要面向产品竞争类分析中股权关系数据进行分析，本实验通过Bert-BiLSTM-CRF方法进行命名实体识别，本次实验主要识别买方（Buyer）、卖方（Seller）、标的（Target）三种实体。
+**编写人：卢克治<br>时间：2020年8月24日<br>项目功能：面向股权关系数据通过Bert-BiLSTM-CRF模型进行命名实体识别**
+**
+- The named entity recognition function of stock relationship data, which identify three types of entities: buyer, seller and target.
++ 本模型细节和代码主要参考使用：[BERT-BiLSTM-CRF-NER](https://github.com/macanv/BERT-BiLSTM-CRF-NER)<br>
+* 本模型使用的Bert模型主要下载以下资源中的RoBERTa-wwm-ext-large, Chinese模型：[中文Bert模型汇总](https://github.com/ymcui/Chinese-BERT-wwm)<br>
+**
 
-本模型细节和代码主要参考使用：https://github.com/macanv/BERT-BiLSTM-CRF-NER<br>
-本模型使用的Bert模型主要下载以下资源中的RoBERTa-wwm-ext-large, Chinese模型：https://github.com/ymcui/Chinese-BERT-wwm
+---
+## 1：数据清洗：
++ 数据清洗功能主要完成对股权关系已标注好的数据进行BIO方式文件的转化。转化好的BIO文件可以作为以下Bert-BiLSTM-CRF进行命名实体识别的模型输入。
++ 输入数据在[数据清洗/inputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/inputData)目录下；
++ 输出数据在[数据清洗/inputData](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/tree/master/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97/outputData)目录下；
++ 脚本运行
+### 1.1：输入数据：
+### 1.2：输出数据：
 
-The named entity recognition function of stock relationship data, which identify three types of entities: buyer, seller and target.
+_ _ _
+## 2：模型训练：
+### 2.1：Docker镜像的使用：
+### 2.2：使用Docker镜像使用gpu进行模型训练：
 
-
-> 1：数据清洗：
->> 1.1：输入数据：
->> 1.2：输出数据：
-
-
-> 2：模型训练：
->> 2.1：Docker镜像的使用：
->> 2.2：使用Docker镜像使用gpu进行模型训练：
-
-
-> 3：模型预测：
+_ _ _
+## 3：模型预测：
 
