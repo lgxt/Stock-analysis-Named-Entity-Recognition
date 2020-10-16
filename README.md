@@ -54,5 +54,5 @@ python3 terminal_predict-original.py
 ```
 _ _ _
 ## 4：项目进展文档：
-+ 本项目进展以及算法详情和实验细节请阅读文档：[股权命名实体识别0925.pptx](https://github.com/macanv/BERT-BiLSTM-CRF-NER)<br>
++ 本项目进展以及算法详情和实验细节请阅读文档：[股权命名实体识别0925.pptx](https://github.com/lgxt/Stock-analysis-Named-Entity-Recognition/blob/master/%E8%82%A1%E6%9D%83%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB0925.pptx)<br>
 
