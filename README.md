@@ -31,10 +31,11 @@ _ _ _
 + 注意tensorflow和cuda的版本自己根据自己的环境适配就行，具体版本可参考[tensorflow和cuda版本对应关系](https://blog.csdn.net/qq_31747765/article/details/107958052)
 ### 2.1：Docker镜像的使用（使用服务器：10.167.3.4）：
 ```
-docker run --runtime nvidia --rm -it -v /home/yonyou/lucas:/Share lucas/tensorflow:v1.15.0rc2-gpu-py3-v1.1 bash
+docker run --runtime nvidia --rm -it -v /home/yonyou/baiqj/lucas:/Share lucas/tensorflow:v1.15.0rc2-gpu-py3-v1.2 bash
 ```
 ### 2.2：使用Docker镜像使用gpu进行模型训练：
 ```
+cd /Share
 nohup python3 -u run.py > run_log.txt 2>&1 &
 ```
 ### 2.3：退出docker镜像：
